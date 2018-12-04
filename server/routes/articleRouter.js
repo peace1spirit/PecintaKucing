@@ -27,7 +27,7 @@ router.post('/', isLogin, upload.single('imagefile'), articleCreate);
 router.post('/byid', articleReadById);
 router.put('/', isLogin,  upload.single('imagefile'), articleUpdate);
 router.delete('/', isLogin, articleDelete);
-router.post('/search',isLogin,  articleSearch);
+router.post('/search',  articleSearch);
 router.get('/byauthor',isLogin,  articleReadByAuthor);
 
 module.exports = router;
