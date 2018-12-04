@@ -5,7 +5,6 @@
         <h5 class="card-header">{{ article.title }}</h5>
         <div class="card-body">
             <img class="card-img-top mb-1" v-bind:src="article.imageurl" alt="Card image" style="width: 200px; height:200px">
-            
             <p class="card-text" ><small class="card-text" >{{ formatDate(article.updatedAt) }}({{ article.author.name }}) </small>
              {{ article.description }}</p>
         </div>
@@ -14,8 +13,9 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
 /* eslint-disable */
+import { mapActions, mapState } from 'vuex'
+
 export default {
     name:'maincontent',
     props:[],
@@ -52,7 +52,7 @@ export default {
     },
     created() {
         this.getarticle()
-        this.refreshArticle()
+        //this.refreshArticle()
     },
 }
 </script>

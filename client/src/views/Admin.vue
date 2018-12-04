@@ -10,6 +10,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 // @ is an alias to /src
 import navbaradmin from '@/components/NavbarAdmin.vue'
 import loginadminmodal from '@/components/LoginAdminModal.vue'

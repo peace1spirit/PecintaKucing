@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
   <div class="content" v-if="users!=null" style="width:800px; margin: 20px 50px">
 
@@ -32,7 +33,7 @@
 <script>
 import { mapActions, mapState } from 'vuex';
 import editusermodal from '@/components/EditUserModal.vue'
-/* eslint-disable */
+
 export default {
     name:'userlist',
     props:[],
