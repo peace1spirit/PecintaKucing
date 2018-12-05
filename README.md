@@ -63,7 +63,7 @@ $ npm start (server side)
 | /article | GET  | Get data articles |
 
 #####  Input article 
-###### title me: e.g. Ciri-ciri Kucing Stres (put in req.body)
+###### title: e.g. Ciri-ciri Kucing Stres (put in req.body)
 ###### description: e.g. kucing tidur (put in req.body)
 ###### imagefile: e.g. fileimage (put in req.body)
 ###### imagefile should be save at ..client/public/assets
@@ -75,7 +75,7 @@ $ npm start (server side)
 | Route    | HTTP   | Description         |
 | -------- | ------ | ------------------- |
 | /article | DELETE | delete data article |
-
+###### articleid : e.g. 123456789 (put in req.body)
 
 
 | Route           | HTTP | Description      |

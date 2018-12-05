@@ -114,6 +114,8 @@ module.exports = {
             });      
     },
     articleDelete: (req, res) => {
+        console.log('deleteeee')
+
         ModelArticle
             .findOneAndDelete({_id:req.body.articleid, author: req.currentuser._id})
             .then((result) => {

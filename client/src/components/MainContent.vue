@@ -9,6 +9,7 @@
                     <h5><strong class="d-inline-block mb-2 text-primary">{{ article.title }}</strong></h5>
                     <div class="mb-1 text-muted small">{{ formatDate(article.updatedAt) }}({{ article.author.name }})</div>
                     <p class="card-text mb-auto" style="" > {{ article.description }}</p>
+                    <a v-if="iduser==article.author._id" @click="onDelete(article._id,index)" class="btn btn-outline-primary btn-sm" role="button" >Delete</a>
                 </div>    
             </div>
         </div>
@@ -28,10 +29,28 @@ export default {
         }
     },
     computed: {
-    ...mapState(['articles'])
+    ...mapState(['articles','iduser'])
     },
     methods:{
-        ...mapActions(['getarticle']),
+        ...mapActions(['getarticle','deleteArticle']),
+        onDelete(id,index){
+            console.log(id)
+            //this.deleteArticle(index)
+            
+            let token=localStorage.getItem('token')
+            this.$server({
+                url:  `/article`,
+                method: 'DELETE',
+                data: { articleid:id },
+                headers: { token: token }
+            })
+            .then(({data}) => {
+                this.articles.splice(index, 1);
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        },
         formatDate(d) {
           let datetime=new Date(d)
           let date = `${datetime.getDate()}/${datetime.getMonth() + 1}/${datetime.getFullYear()} `

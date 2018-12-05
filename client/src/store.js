@@ -33,6 +33,9 @@ export default new Vuex.Store({
     SETARTICLES (state, payload) {
       state.articles = payload.data
     },
+    DELARTICLES(state, payload) {
+      
+    },
   },
   actions: {
     getarticle ({ commit }, payload){
@@ -49,6 +52,10 @@ export default new Vuex.Store({
             console.log(err)
         });
         
+    },
+    deleteArticle ({ commit }, payload){
+      console.log( 'iniiiiiiiiiiiiii',payload)
+      commit('DELARTICLES', { data: payload })
     },
     getuserlist ({ commit }, payload){
       let token=localStorage.getItem('token')
