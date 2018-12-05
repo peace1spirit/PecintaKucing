@@ -1,18 +1,14 @@
 /* eslint-disable */
 <template>
-    <div class="container mt-2">
-      <div class="row" v-for="(article, index) in articles" :key="index">
-        <div class="col-md-12">
-            <div class="card flex-md-row mb-2 shadow-sm h-md-250">
-                <img class="card-img-left d-flex flex-auto d-none d-lg-block" alt="Thumbnail" v-bind:src="article.imageurl" style="flex-shrink: 0;width: 250px; height: 250px;">
-                <div class="card-body d-flex flex-column align-items-start">
-                    <h5><strong class="d-inline-block mb-2 text-primary">{{ article.title }}</strong></h5>
-                    <div class="mb-1 text-muted small">{{ formatDate(article.updatedAt) }}({{ article.author.name }})</div>
-                    <p class="card-text mb-auto" style="" > {{ article.description }}</p>
-                </div>    
-            </div>
+    <div class="col-lg-12 mt-1">
+        <div class="card mt-2"  v-for="(article, index) in articles" :key="index">
+        <h5 class="card-header">{{ article.title }}</h5>
+        <div class="card-body">
+            <img class="card-img-top mb-1" v-bind:src="article.imageurl" alt="Card image" style="width: 200px; height:200px">
+            <p class="card-text" ><small class="card-text" >{{ formatDate(article.updatedAt) }}({{ article.author.name }}) </small>
+             {{ article.description }}</p>
         </div>
-      </div>
+        </div>
     </div>
 </template>
 
@@ -25,6 +21,7 @@ export default {
     props:[],
     data(){
         return {
+            //articles:null,
         }
     },
     computed: {
@@ -55,11 +52,12 @@ export default {
     },
     created() {
         this.getarticle()
+        //this.refreshArticle()
     },
 }
 </script>
 <style scoped>
 .card-text{
-    text-align:left;
+    float: none; margin:10px auto ; text-align:left;
 }
 </style>
