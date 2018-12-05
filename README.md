@@ -1,16 +1,26 @@
 # PecintaKucing
 
 ### Installation and Getting Started
+### Using Mongodb 
 ```sh
-$ npm i nodemon
+$ npm i -g nodemon
+### server side
+$ cd server
+$ npm i
+$ nppm test (make data dummy)
+$ npm start (server side)
+
+### client side
 $ cd client
 $ npm i
 $ npm run dev (client side)
-$ cd server
-$ npm start (server side)
 
+###Try to login with 
+###name: 'Mukmin',
+###email : 'mukmin@gmail.com', 
+###password : '123456', 
+###role : 'admin', 
 
-### Using Mongodb 
 ### List of API  
 ##### http://localhost:3000/
 

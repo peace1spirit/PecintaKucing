@@ -54,8 +54,7 @@ module.exports = {
             })
     },
     articleCreate: (req, res) => { 
-        console.log('tessssss') 
-        console.log (req.file)
+        //console.log (req.file)
         if (req.hasOwnProperty('file')){
             var newArticle = new ModelArticle({
                 title: req.body.title,

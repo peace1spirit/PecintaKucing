@@ -36,7 +36,6 @@ export default {
         onDelete(id,index){
             console.log(id)
             //this.deleteArticle(index)
-            
             let token=localStorage.getItem('token')
             this.$server({
                 url:  `/article`,
