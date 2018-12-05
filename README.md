@@ -7,7 +7,7 @@ $ npm i -g nodemon
 ### server side
 $ cd server
 $ npm i
-$ nppm test (make data dummy)
+$ npm test (make test data example)
 $ npm start (server side)
 
 ### client side
