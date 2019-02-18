@@ -41,7 +41,7 @@ class UserController {
                 }
                 res.status(200).json({
                     message: 'Login successfully',
-                    token: jwt.sign(Payload, process.env.JWT),
+                    token: jwt.sign(Payload, process.env.JWT,{ expiresIn: 60 } ),
                     user: { id: result._id, name: result.name, email: result.email }
                 })
             } else {
