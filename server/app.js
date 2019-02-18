@@ -8,7 +8,6 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 // var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
 var userRouter = require('./routes/userRouter');
 var articleRouter = require('./routes/articleRouter');
 
