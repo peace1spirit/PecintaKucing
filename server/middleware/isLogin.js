@@ -18,7 +18,7 @@ module.exports = {
                         req.currentuser=result
                         next()
                     } else {
-                        res.status(403).json({ message : 'Token is not valid modif' });
+                        res.status(403).json({ message : 'Token is not valid modif ' });
                     }
                 })
             } catch (error) {
